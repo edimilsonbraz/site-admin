@@ -18,6 +18,9 @@ app.use(bodyParser.json());
 app.engine('handlebars', handlebars({defaultLayout: "main"}));
 app.set('view engine', 'handlebars');
 
+//Arquivos Estaticos
+app.use(express.static(path.join(__dirname, "public")))
+
 
 
 //ROTAS
